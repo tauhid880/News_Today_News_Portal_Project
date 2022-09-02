@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
     <title>Blog</title>
 </head>
 <body>
-    <h1>I am Blog</h1>
+    <div class="text-center mt-10">
+  <div class="collapse">
+  <input type="checkbox" /> 
+  <div class="collapse-title text-xl font-medium">
+    Difference between Var Let and Const.
+  </div>
+  <div class="collapse-content"> 
+    <p>The scope of a var variable is functional scope. The scope of a let variable is block scope. The scope of a const variable is block scope.</p>
+  </div>
+</div>
+<div class="collapse">
+  <input type="checkbox" /> 
+  <div class="collapse-title text-xl font-medium">
+    Difference between arrow function and normal function.
+  </div>
+  <div class="collapse-content"> 
+    <p>Arrow functions – a new feature introduced in ES6 – enable writing concise functions in JavaScript. While both regular and arrow functions work in a similar manner</p>
+  </div>
+</div>
+  <div class="collapse">
+  <input type="checkbox" /> 
+  <div class="collapse-title text-xl font-medium">
+    Difference between foreach, map, filter, find.
+  </div>
+  <div class="collapse-content"> 
+    <p>forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined. <br>
+        map() executes the same code on every element in an array and returns a new array with the updated elements. <br>
+        filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria. <br>
+        find() Function .find() is also a search function like the previous but they differ in one small detail — this function returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.
+    </p>
+  </div>
+</div>
+    </div>
+ <!-- Tailwind js-->
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
