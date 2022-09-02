@@ -1,0 +1,13 @@
+Q1 - difference between var let and const
+Q2 - difference between arrow function and normal function
+Q3 - difference between foreach map filter find
+Q4 - why use template string in js
+
+For Bonus Marks
+1 When click category show a loading spinner
+2 Responsive the website
+3 show how much new found in the every category
+4 Minimum 10 git commit
+5 use arrow function
+6 Usning fetch or async or awite and use try - catch
+7 Short most view news in defult page
