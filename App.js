@@ -61,7 +61,7 @@ const displayNews = (category) => {
   }
   const categoriesCount = document.getElementById("categories-count");
   categoriesCount.style.display = "block";
-  categoriesCount.innerHTML = `<p class = " mt-5 text-3xl font-bold text-center">${category.length} items found</P>`;
+  categoriesCount.innerHTML = `<p class = " mt-5 text-2xl font-bold text-center">${category.length} items found</P>`;
   category.sort((a, b) => b.total_view - a.total_view);
 
   category.forEach((news) => {
