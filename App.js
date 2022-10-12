@@ -1,4 +1,3 @@
-//  নিউস ক্যাটাগরি  লোড করলাম
 const loadNewsSectionCategory = () => {
   showSpinner(true);
   fetch("https://openapi.programming-hero.com/api/news/categories")
@@ -8,13 +7,11 @@ const loadNewsSectionCategory = () => {
     );
 };
 
-// নিউস ক্যাটাগরি ডিসপ্লে করলাম
 const displayNewsSectionCategories = (newsSectionCategories) => {
   showSpinner(false);
-  // console.log(newsSectionCategories);
+
   const categoryContainer = document.getElementById("category-container");
   newsSectionCategories.forEach((singleNewsSection) => {
-    // console.log(singleNewsSection);
     const newsList = document.createElement("li");
     newsList.innerHTML = singleNewsSection.category_name;
     newsList.setAttribute(
@@ -34,20 +31,15 @@ const displayNewsSectionCategories = (newsSectionCategories) => {
   });
 };
 
-// ইন্ডিভিজুয়্যাল নিউস ক্যাটাগরি লোড করলাম
-
 const loadSingelCategory = (categoryId) => {
   showSpinner(true);
   const categoriSec = document.getElementById("category-content");
   const categoriesCount = document.getElementById("categories-count");
   const errorMessage = document.getElementById("error-message");
-  // categoriesCount.innerText = "";
+
   categoriesCount.style.display = "none";
-  // categoriSec.innerHTML = "";
-  // errorMessage.innerText = "";
 
   let url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
-  // console.log(url);
 
   fetch(url)
     .then((res) => res.json())
@@ -57,9 +49,9 @@ const loadSingelCategory = (categoryId) => {
 
 const displayNews = (category) => {
   showSpinner(false);
-  // console.log(category);
+
   const categoryContentSec = document.getElementById("category-content");
-  //  cleare the old data
+
   categoryContentSec.innerHTML = "";
   if (category?.length <= 0) {
     const errorMessage = document.createElement("div");
@@ -128,7 +120,7 @@ const displayNews = (category) => {
 const loadSingleNews = (id) => {
   const newsDetails = document.getElementById("news-details");
   const newsTitle = document.getElementById("news-title");
-  // const newsImg = document.getElementById("news-img");
+
   let url = `https://openapi.programming-hero.com/api/news/${id}`;
   fetch(url)
     .then((res) => res.json())
