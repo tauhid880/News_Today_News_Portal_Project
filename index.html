@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwsome -->
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
       rel="stylesheet"
-      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+    <!--  -->
     <title>NewsToday</title>
   </head>
   <body class="font-sans">
@@ -26,18 +46,12 @@
           <div class="form-control">
             <ul class="menu menu-horizontal p-0 text-xl font-semibold">
               <li>
-                <a
-                  class="text-sm p-2 lg:text-xl md:text-xl"
-                  target="_self"
-                  href="index.html"
+                <a class="text-sm p-2 lg:text-xl md:text-xl" href="index.html"
                   >News</a
                 >
               </li>
               <li>
-                <a
-                  class="text-sm p-2 lg:text-xl md:text-xl"
-                  target="_self"
-                  href="blog.html"
+                <a class="text-sm p-2 lg:text-xl md:text-xl" href="blog.html"
                   >Blog</a
                 >
               </li>
@@ -46,7 +60,7 @@
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
-                <img src="https://placeimg.com/80/80/people" />
+                <img src="/img/user.jpg" />
               </div>
             </label>
             <ul
@@ -66,53 +80,61 @@
         </div>
       </div>
       <!-- Navbar End -->
+
     </header>
     <!-- Header Section End -->
+    
     <!-- Main Section -->
     <main>
+      </section>
+      <!--  -->
       <!-- Category Section -->
-      <div
-        id="category-container"
-        class="navbar lg:flex-row lg:justify-around lg:items-center md:flex-row md:justify-around md:items-center flex-col"
-      ></div>
+      <section>
+        <ul id="category-container" class="navbar lg:flex-row lg:justify-around lg:items-center md:flex-row md:justify-around md:items-center flex-col mt-10"></ul>
+        <h3 class="container mx-auto px-6 font-bold" id="categories-count"></h3>
+      </section>
       <!-- Category Section End -->
+       <!-- Spinner -->
+      <div id="spinner" class="flex justify-center items-center">
+  <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+      <!-- Spinner End -->
 
       <!-- Category Content -->
-      <div id="category-content" class="p-10">
-        <div class="card lg:card-side bg-base-100 shadow-xl">
-          <figure>
-            <img src="https://placeimg.com/400/400/arch" alt="Album" />
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">New album is released!</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
-            <div class="grid grid-cols-4 gap-4 items-center">
-              <div class="flex flex-cols-2 gap-3 items-center">
-                <div>
-                  <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                    <div class="w-10 rounded-full">
-                      <img src="https://placeimg.com/80/80/people" />
-                    </div>
-                  </label>
-                </div>
-                <div>
-                  <p class="content-center">My name</p>
-                  <p>10-20-30</p>
-                </div>
-              </div>
-              <div>Item 2</div>
-              <div>Item 3</div>
-              <div>Item 4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+     <section>
+       <div id="category-content" class="p-10">
+       
+       </div>
+     </section>
       <!-- Category Content End -->
+      <!-- Single Category Section  -->
+      <section>
+        <div class="categories-count"></div>
+      </section>
+      <!-- Modal Section -->
+      <input type="checkbox" id="my-modal" class="modal-toggle" />
+           <div class="modal">
+          <div class="modal-box">
+          <div id="news-title" class="font-bold text-lg"></div>
+          <img
+              id="news-img"
+              src=""
+              alt=""
+              class="max-w-full h-auto rounded-lg"
+            />
+          <div id="news-details" class="py-4"></div>
+          <div class="modal-action">
+         <label for="my-modal" class="btn">Close</label>
+    </div>
+     </div>
+        </div>
+      <!-- Modal Section End -->
+      <!-- Single Category Section End -->
     </main>
     <!-- Main Section End -->
     <!-- Tailwind & JS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="main.js"></script>
+    <script src="App.js"></script>
   </body>
 </html>
