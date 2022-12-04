@@ -1,11 +1,4 @@
-# news-portal-assignemnt
-Please create yoru private repo 
-## [https://classroom.github.com/a/PZ8KfL5q](https://classroom.github.com/a/PZ8KfL5q)
-
-### Private Repo Link: [https://classroom.github.com/a/PZ8KfL5q](https://classroom.github.com/a/PZ8KfL5q)
-
-
-----------------
+# news-portal-assignemnt(News Today)
 
 ## API Links
 
